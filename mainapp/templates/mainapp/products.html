@@ -66,9 +66,13 @@
                                 <h5>{{product.price}} rub</h5>
                                 <p class="card-text">{{product.short_description}}</p>
                             </div>
-                            <div class="card-footer text-center">
-                                <button type="button" class="btn btn-outline-success">Отправить в корзину</button>
-                            </div>
+                                <div class="card-footer text-center">
+                                    <a href="{% url 'baskets:basket_add' product.id %}">
+                                        <button type="button" class="btn btn-outline-success">
+                                            Отправить в корзину
+                                        </button>
+                                    </a>
+                                </div>
                         </div>
                     </div>
                 {% endfor %}
